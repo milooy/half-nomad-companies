@@ -1,16 +1,30 @@
-import HomePage from "./pages/HomePage"
-import "./index.css"
-import { NavBar } from "./components/NavBar"
+import {
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom"
 import Container from "./components/Container"
+import { NavBar } from "./components/NavBar"
+import "./index.css"
 import CompanyPage from "./pages/CompanyPage"
+import HomePage from "./pages/HomePage"
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    path: "/company/:companyName",
+    element: <CompanyPage />,
+  },
+]);
 
 function App() {
   return (
     <>
       <NavBar />
       <Container>
-        {/* <HomePage /> */}
-        <CompanyPage />
+        <RouterProvider router={router} />
       </Container>
     </>
   )

@@ -1,18 +1,16 @@
-/* eslint-disable react/prop-types */
-
 const LOGO = "https://github.com/milooy/half-nomad/assets/3839771/7215caed-3fcd-4779-bc41-8774754bdde5"
 
 export const NavBar = () => {
   return (
     <nav>
       <div className="flex justify-between p-6">
-        <div className="flex">
+        <div className="flex flex-wrap	">
           <img src={LOGO} className="w-8 h-8" alt="Half Nomad Logo" />
           <span className="self-center px-2 text-2xl font-extrabold dark:text-white">HALF__NOMAD</span>
-          <span className="self-center text-s italic font-normal text-gray-500">원격근무/자율출퇴근 회사 아카이브</span>
+          <span className="self-center text-s italic font-normal text-gray-500 shrink-0	">원격근무/자율출퇴근 회사 아카이브</span>
         </div>
 
-        <ul>
+        <ul className="shrink-0">
           <NavMenu>로그인</NavMenu>
         </ul>
       </div>
