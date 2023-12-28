@@ -1,11 +1,18 @@
-import CompanyPage from "./pages/company"
-import HomePage from "./pages/home"
+import HomePage from "./pages/HomePage"
+import "./index.css"
+import { NavBar } from "./components/NavBar"
+import Container from "./components/Container"
+import CompanyPage from "./pages/CompanyPage"
 
 function App() {
   return (
-    <main>
-      <CompanyPage />
-    </main>
+    <>
+      <NavBar />
+      <Container>
+        {/* <HomePage /> */}
+        <CompanyPage />
+      </Container>
+    </>
   )
 }
 
