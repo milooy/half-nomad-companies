@@ -1,3 +1,4 @@
+import Markdown from "markdown-to-jsx";
 import { useParams } from "react-router-dom";
 import CompanyHeading from "src/components/CompanyDetail"
 import { COMPANY_LIST } from "src/constants/COMPANY_LIST"
@@ -9,8 +10,10 @@ function CompanyPage() {
   return (
     <main>
       <CompanyHeading company={company} />
-      <div>
-        {company.detail}
+      <div className="styled-markdown">
+        <Markdown>
+          {company.detail}
+        </Markdown>
       </div>
     </main>
   )

@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .styled-markdown h1 {
+    @apply text-2xl;
+  }
+
+  .styled-markdown h2 {
+    @apply text-xl;
+  }
+
+  .styled-markdown h3 {
+    @apply text-lg;
+  }
+
+  .styled-markdown ul {
+    @apply list-inside list-disc;
+  }
+}
